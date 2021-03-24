@@ -1,0 +1,19 @@
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info"
+        (click)= "addMark()">
+        + Add
+    </li>
+
+    <li *ngFor="let mark of marks; let i = index"
+        class="list-group-item list-group-item-info"
+        (click)= "goMark( mark )"
+        (dblclick) = "deleteMark( i )"
+        [ngStyle] = "{
+            'backgroundColor' : mark.color
+        
+        }">
+        marker {{ i + 1 }}
+    </li>
+</ul>
+
+<div #map class="map-container"></div>

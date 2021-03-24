@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <li *ngFor="let route of routes" 
+        [routerLink] = "[route.route]"
+        routerLinkActive = "active"
+        class="list-group-item">
+        {{ route.name }}
+        
+    </li>
+
+
+
+</ul>
